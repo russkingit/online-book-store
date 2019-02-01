@@ -1,0 +1,32 @@
+[
+  {
+    "Title": "The Lord of the Rings",
+    "Year": 1968,
+    "Price": "30.00",
+    "Category": "Fantasy"
+  },
+  {
+    "Title": "Harry Potter and the Philosopher's Stone",
+    "Year": 1998,
+    "Price": "29.99",
+    "Category": "children"
+  },
+  {
+    "Title": "The Little Prince",
+    "Year": 1943,
+    "Price": "49.99",
+    "Category": "children"
+  },
+  {
+    "Title": "The Hobbit",
+    "Year": 1937,
+    "Price": "39.95",
+    "Category": "Fantasy"
+  },
+  {
+    "Title": "And Then There Were None",
+    "Year": 1939,
+    "Price": "39.95",
+    "Category": "Mystery"
+  }
+]

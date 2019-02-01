@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="home.css" rel="stylesheet">
+  <script src="/javascripts/admin.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Admin page</title>
+</head>
+<body>
+  <div id="utest"></div>
+  
+
+  <div class="container">
+    <nav class="navbar navbar-inverse">
+          <div>
+              <div>
+                <a class="navbar-brand" style="font-size: 16pt;" href="home.html">BookStore</a>
+              </div>
+              <form class="navbar-form navbar-left" action="home.html">
+                <div class="form-group">
+                    <input id="search" type="text" class="form-control"  placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default" onclick="searchBook()">Submit</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right" style="margin-right: 5px">
+                <li ><a id="AUchange" href="#" onclick="showLogin()"><span class="glyphicon glyphicon-user"></span>Account</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+                <li class="" id="SignOut"><a href="home.html" onclick="clearSession()">Sign Out</a></li>
+              </ul>
+          </div>
+    </nav>
+
+    <img src="../images/headPic.jpg" class="headPic">
+
+      <nav class="navbar" style="font-size: 16pt;">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Textbook<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Business</a></li>
+                    <li><a href="#">Computer</a></li>
+                    <li><a href="#">Language</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Travel<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">USA</a></li>
+                    <!-- <li><a href="#">English</a></li> -->
+                    <li><a href="#">Franch</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Novel<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <!-- <li><a href="#">Advanture</a></li> -->
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Fiction</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Teens<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Biography</a></li>
+                    <li><a href="#">Romance</a></li>
+                    <!-- <li><a href="#">History</a></li> -->
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Classic</a></li>
+                    <li><a href="#">Pop Music</a></li>
+                    <!-- <li><a href="#">Jazz</a></li> -->
+                </ul>
+              </li>
+          </ul>
+        </div>
+    </nav>
+    <hr>
+   <!--  </br> -->
+
+    <h2 id="Head"> Update a book </h2>
+    </br>
+
+    <div class="row">
+
+      <div class="col-sm-6 col-md-2" id="Left-Menu">
+        <div class="sidenav">
+          <!-- onclick weird -->
+          <div class="list-group" id=Left-List>
+            <a id="My_Account" href="admin.html" class="list-group-item">My Account</a>
+            <a href="#" class="list-group-item">Order History</a>
+            <a id="List_all_books" href="#" class="list-group-item">List all books</a>
+            <a id="Add_a_book" href="#" class="list-group-item">Add a book</a>
+            <a id="Delete_a_book" href="#" class="list-group-item">Delete a book</a>
+            <a id="Update_a_book" href="#" class="list-group-item">Update a book</a>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="col-sm-6 col-md-10">
+        <div class="row" id="MyContent">
+          
+          <form class="form-signin"> 
+            <input type="text" id="B_title" class="form-control" placeholder="Title"> 
+            <input type="value" id="B_year" class="form-control" placeholder="Year"> 
+            <input type="text" id="B_price" class="form-control" placeholder="Price"> 
+            <input type="text" id="B_category" class="form-control" placeholder="Category"> 
+            <input type="value" id="B_inventory" class="form-control" placeholder="Inventory"> 
+            <button id="btnAddBook" class="btn btn-lg btn-primary btn-block" type="submit" onclick="addBook()">Add </button>
+          </form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+  

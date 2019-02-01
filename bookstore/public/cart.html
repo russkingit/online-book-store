@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link href="/stylesheets/home.css" rel="stylesheet">
+  <link href="/stylesheets/cart.css" rel="stylesheet">
+  <script src="/javascripts/cart.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>Cart</title>
+</head>
+<body>
+  <div id="utest"></div>
+  
+
+  <div class="container">
+    <nav class="navbar navbar-inverse">
+          <div>
+              <div>
+                <a class="navbar-brand" style="font-size: 16pt;" href="home.html">BookStore</a>
+              </div>
+              <form class="navbar-form navbar-left" action="home.html">
+                <div class="form-group">
+                    <input id="search" type="text" class="form-control"  placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default" onclick="searchBook()">Submit</button>
+              </form>
+              <ul class="nav navbar-nav navbar-right" style="margin-right: 5px">
+                <li ><a id="AUchange" href="#" onclick="showLogin()"><span class="glyphicon glyphicon-user"></span>Account</a></li>
+                <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>Cart</a></li>
+                <li id="SignOut"><a href="home.html" onclick="clearSession()">Sign Out</a></li>
+              </ul>
+          </div>
+    </nav>
+
+    <img src="../images/headPic.jpg" class="headPic">
+
+      <nav class="navbar" style="font-size: 16pt;">
+        <div class="container-fluid">
+          <ul class="nav navbar-nav">
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Textbook<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" onclick="showClass('Business')">Business</a></li>
+                    <li><a href="#" onclick="showClass('Computer')">Computer</a></li>
+                    <li><a href="#" onclick="showClass('Language')">Language</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Travel<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" onclick="showClass('USA')">USA</a></li>
+                    <!-- <li><a href="#">English</a></li> -->
+                    <li><a href="#" onclick="showClass('Franch')">Franch</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Novel<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <!-- <li><a href="#">Advanture</a></li> -->
+                    <li><a href="#" onclick="showClass('Action')">Action</a></li>
+                    <li><a href="#" onclick="showClass('Fiction')">Fiction</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Teens<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#" onclick="showClass('Biography')">Biography</a></li>
+                    <li><a href="#" onclick="showClass('Romance')">Romance</a></li>
+                    <!-- <li><a href="#">History</a></li> -->
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Music<span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Classic</a></li>
+                    <li><a href="#">Pop Music</a></li>
+                    <!-- <li><a href="#">Jazz</a></li> -->
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#" onclick="showTopTen()">Top 10 Best Seller</a>
+          </ul>
+        </div>
+    </nav>
+    <hr>
+   <!--  </br> -->
+   <div>
+      <h4>Cart 
+        <span class="price" style="color:black">
+          <i class="fa fa-shopping-cart"></i> 
+          <b id="numOfBooks"></b>
+        </span>
+      </h4>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Book Name</th>
+            <th scope="col">Quantity</th>
+            <th scope="col">Price</th>
+          </tr>
+        </thead>
+        <tbody id="cart_item"></tbody>
+      </table>
+      
+      <hr>
+      <p>Total <span class="price" style="color:black"><b id="totalPrice"></b></span></p>
+      <a href="#" type="button" class="btn btn-success" style="float: right; margin-bottom: 10px" onclick="checkOut()">check out</a>
+      <a href="home.html" type="button" class="btn btn-info" style="margin-bottom: 10px">back to shopping</a>
+    </div>
+    </div>
+  </body>
